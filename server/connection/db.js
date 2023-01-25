@@ -3,12 +3,35 @@ require("dotenv").config();
 
 mongoose.set("strictQuery", true);
 
-const dataBaseUrl = process.env.DB_URL  // database url
+const mongooseURI = process.env.DB_URL; // database url
 
-mongoose.connect(dataBaseUrl, (err) => {
-  if (err) {
-    console.log("DB Error!", err);
-  } else {
-    console.log("DB connected!");
-  }
-});
+// const db = () => {
+//   mongoose.connect(dataBaseUrl, (err) => {
+//     if (err) {
+//       console.log("DB Error!", err);
+//     } else {
+//       console.log("DB connected!");
+//       return
+//     }
+//   });
+// };
+
+
+const connectToMongo = async() => {
+  mongoose.connect(
+    mongooseURI,
+    {
+      useNewUrlParser: true,
+    },
+
+    () => {
+      console.log("Connected to Mongo succesfully.");
+      return 
+    }
+  );
+ 
+};
+
+module.exports = connectToMongo;
+
+// module.exports =db;
