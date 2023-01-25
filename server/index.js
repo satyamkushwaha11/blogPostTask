@@ -33,10 +33,10 @@ if (app.get('env') === 'development') {
 }
 
 
-app.listen(process.env.PORT||5000, (err) => {
+app.listen(process.env.PORT||6000, (err) => {
     if (err) {
         throw err
     } else {
-        console.log(`your app is running on PORT : ${process.env.PORT||5000}`);
+        console.log(`your app is running on PORT : ${process.env.PORT||6000}`);
     }
 })
