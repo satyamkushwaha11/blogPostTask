@@ -58,7 +58,7 @@
 
 .AddBlogButton-iconbox {
   position: absolute;
-  bottom: 100px;
+  bottom:0;
 }
 
 .AddBlogButton-iconbox>img,
