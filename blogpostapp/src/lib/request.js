@@ -1,5 +1,5 @@
 import Axios from "axios";
-const API_HOST = "http://localhost:5000";
+const API_HOST = "http://localhost:6000";
 const getUrl = (endpoint) => {
   return API_HOST + endpoint;
 };
